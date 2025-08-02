@@ -7,6 +7,9 @@ import Profile from './pages/Profile';
 import Register from './pages/Register';
 import UseState from './pages/Day3/UseState';
 import UsePharma from './pages/Day4/UsePharma';
+import { StyledComponents } from './pages/Day5/StyledComponents';
+import Greetings from './pages/Day5/Greetings';
+import Fruits from './pages/Day5/Fruits';
 
 function App() {
   return (
@@ -18,7 +21,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/usestate" element={<UseState />} />
         <Route path="/usepharma/:id" element={<UsePharma />} />
-        <Route path="/usepharma" element={<UsePharma />} />
+        <Route path="/usepharma" element={<UsePharma />} /> 
+        <Route path="/styledcomponents" element={<StyledComponents />} />
+        <Route path="/greetings" element={<Greetings />} />
+        <Route path="/fruits" element={<Fruits />} />
       </Routes>
     </div>
   );
