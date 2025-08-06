@@ -1,3 +1,4 @@
+import './App.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -12,6 +13,7 @@ import Greetings from './pages/Day5/Greetings';
 import Fruits from './pages/Day5/Fruits';
 import DynamicStyles from './pages/Day6/DynamicStyles';
 import LoginRegister from './pages/Day6/LoginRegister';
+import NotFound from './pages/Day7/NotFound';
 
 
 
@@ -31,6 +33,7 @@ function App() {
         <Route path="/fruits" element={<Fruits />} />
         <Route path="/loginregister" element={<LoginRegister />} />
         <Route path="/dynamicstyles" element={<DynamicStyles />} />
+        <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
   );
