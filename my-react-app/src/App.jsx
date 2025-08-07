@@ -14,6 +14,7 @@ import Fruits from './pages/Day5/Fruits';
 import DynamicStyles from './pages/Day6/DynamicStyles';
 import LoginRegister from './pages/Day6/LoginRegister';
 import NotFound from './pages/Day7/NotFound';
+import Products from './pages/Day8/Products';
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/loginregister" element={<LoginRegister />} />
         <Route path="/dynamicstyles" element={<DynamicStyles />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/products" element={<Products />} />
           </Routes>
     </div>
   );

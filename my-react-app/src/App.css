@@ -53,5 +53,6 @@ html,body, #root{
   background-color: #000;
   overflow: hidden;
   box-sizing: border-box;
-
+  height: auto;
+  overflow: auto;
 }
