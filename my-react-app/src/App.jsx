@@ -13,8 +13,11 @@ import Greetings from './pages/Day5/Greetings';
 import Fruits from './pages/Day5/Fruits';
 import DynamicStyles from './pages/Day6/DynamicStyles';
 import LoginRegister from './pages/Day6/LoginRegister';
-import NotFound from './pages/Day7/NotFound';
 import Products from './pages/Day8/Products';
+import StoreProducts from './pages/Day8/StoreProducts';
+import SingleProduct from './pages/Day8/SingleProduct';
+import Cart from './pages/Day8/Cart';
+import NotFound from './pages/Day7/NotFound';
 
 
 
@@ -34,8 +37,11 @@ function App() {
         <Route path="/fruits" element={<Fruits />} />
         <Route path="/loginregister" element={<LoginRegister />} />
         <Route path="/dynamicstyles" element={<DynamicStyles />} />
+        <Route path="/" element={<Products />} />
+        <Route path="/storeproducts" element={<StoreProducts />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/products" element={<Products />} />
           </Routes>
     </div>
   );
