@@ -17,6 +17,7 @@ import Products from './pages/Day8/Products';
 import StoreProducts from './pages/Day8/StoreProducts';
 import SingleProduct from './pages/Day8/SingleProduct';
 import Cart from './pages/Day8/Cart';
+import PriceCalculator from './pages/Day9/PriceCalculator';
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/storeproducts" element={<StoreProducts />} />
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/PriceCalculator" element={<PriceCalculator />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
