@@ -8,11 +8,29 @@ function PriceCalculator() {
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedItems(items);
-    }, 500);  // 500ms delay
+    }, 500); // 500ms delay
 
     return () => clearTimeout(handler);
   }, [items]);
 
+  // ❌ ERROR VERSION (pehle aisa tha)
+  /*
+  if (debouncedItems > 0) {
+    const totalPrice = useMemo(() => {
+      console.log("Calculating total price...");
+      return slowFunction(debouncedItems);
+    }, [debouncedItems]);
+
+    return (
+      <div style={themeStyles}>
+        <h2>Shopping Cart</h2>
+        <h3>Total Price: ₹{totalPrice}</h3>
+      </div>
+    );
+  }
+  */
+
+  // ✅ FIXED VERSION (ab aisa kiya)
   const totalPrice = useMemo(() => {
     console.log("Calculating total price...");
     return slowFunction(debouncedItems);
@@ -25,7 +43,7 @@ function PriceCalculator() {
     borderRadius: "10px",
     width: "300px",
     margin: "20px auto",
-    textAlign: "center"
+    textAlign: "center",
   };
 
   return (
@@ -51,7 +69,7 @@ function PriceCalculator() {
 
 function slowFunction(quantity) {
   console.log("Slow function running...");
-  for (let i = 0; i < 20000000; i++) {}  // loop chhota rakha hai
+  for (let i = 0; i < 20000000; i++) {}
   return quantity * 499;
 }
 
