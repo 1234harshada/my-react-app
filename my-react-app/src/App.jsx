@@ -18,6 +18,10 @@ import StoreProducts from './pages/Day8/StoreProducts';
 import SingleProduct from './pages/Day8/SingleProduct';
 import Cart from './pages/Day8/Cart';
 import PriceCalculator from './pages/Day9/PriceCalculator';
+import HooksDemo from './pages/Day10/HooksDemo';
+import RegistrationForm from './pages/Day11/RegistrationForm';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -25,6 +29,8 @@ import NotFound from './pages/Day7/NotFound';
 function App() {
   return (
     <div>
+      <ToastContainer position="top-right"
+      autoclose={3000} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -43,6 +49,8 @@ function App() {
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/PriceCalculator" element={<PriceCalculator />} />
+        <Route path="/HooksDemo" element={<HooksDemo />} />
+        <Route path="/RegistrationForm" element={<RegistrationForm />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
