@@ -22,6 +22,8 @@ import HooksDemo from './pages/Day10/HooksDemo';
 import RegistrationForm from './pages/Day11/RegistrationForm';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MyCounter from './pages/Day12/MyCounter';
+import DarkModePage from './pages/Day13/DarkModePage';
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -51,6 +53,8 @@ function App() {
         <Route path="/PriceCalculator" element={<PriceCalculator />} />
         <Route path="/HooksDemo" element={<HooksDemo />} />
         <Route path="/RegistrationForm" element={<RegistrationForm />} />
+        <Route path="/MyCounter" element={<MyCounter />} />
+        <Route path="/DarkModePage" element={<DarkModePage />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
