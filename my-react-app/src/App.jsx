@@ -24,6 +24,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MyCounter from './pages/Day12/MyCounter';
 import DarkModePage from './pages/Day13/DarkModePage';
+import TestApp from './pages/Day14_Test/TestApp';
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -55,6 +56,7 @@ function App() {
         <Route path="/RegistrationForm" element={<RegistrationForm />} />
         <Route path="/MyCounter" element={<MyCounter />} />
         <Route path="/DarkModePage" element={<DarkModePage />} />
+        <Route path="/TestApp" element={<TestApp />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
