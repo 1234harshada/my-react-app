@@ -27,6 +27,7 @@ import DarkModePage from './pages/Day13/DarkModePage';
 import TestApp from './pages/Day14_Test/TestApp';
 import ShoppingCartApp from './pages/Day15/ShoppingCartApp';
 import Calculator from './pages/Day16/Calculator';
+import AuthApp from './pages/Day17_Test2/AuthApp';
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -61,6 +62,7 @@ function App() {
         <Route path="/TestApp" element={<TestApp />} />
         <Route path="/ShoppingCartApp" element={<ShoppingCartApp />} />
         <Route path="/Calculator" element={<Calculator />} />
+        <Route path="/AuthApp/*" element={<AuthApp />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
