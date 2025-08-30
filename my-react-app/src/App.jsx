@@ -25,6 +25,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MyCounter from './pages/Day12/MyCounter';
 import DarkModePage from './pages/Day13/DarkModePage';
 import TestApp from './pages/Day14_Test/TestApp';
+import ShoppingCartApp from './pages/Day15/ShoppingCartApp';
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -57,6 +58,7 @@ function App() {
         <Route path="/MyCounter" element={<MyCounter />} />
         <Route path="/DarkModePage" element={<DarkModePage />} />
         <Route path="/TestApp" element={<TestApp />} />
+        <Route path="/ShoppingCartApp" element={<ShoppingCartApp />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
