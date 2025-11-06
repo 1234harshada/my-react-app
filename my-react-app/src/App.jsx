@@ -30,6 +30,7 @@ import Calculator from './pages/Day16/Calculator';
 import AuthApp from './pages/Day17_Test2/AuthApp';
 import RegisterPage from './pages/LoginSystem/RegisterPage';
 import LoginPage from './pages/LoginSystem/LoginPage';
+import MyLoginApp from './pages/MyLoginApp';
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -67,6 +68,8 @@ function App() {
         <Route path="/AuthApp/*" element={<AuthApp />} />
         <Route path="/RegisterPage" element={<RegisterPage />} />
         <Route path="/LoginPage" element={<LoginPage />} />
+        <Route path="/" element={<MyLoginApp />} />
+        <Route path="/MyLoginApp" element={<MyLoginApp />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
