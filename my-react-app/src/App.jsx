@@ -31,6 +31,9 @@ import AuthApp from './pages/Day17_Test2/AuthApp';
 import RegisterPage from './pages/LoginSystem/RegisterPage';
 import LoginPage from './pages/LoginSystem/LoginPage';
 import MyLoginApp from './pages/MyLoginApp';
+import UserRegister from "./pages/UserRegister";
+import UserLogin from "./pages/UserLogin";
+import SellerViewProducts from "./pages/SellerViewProducts";
 import NotFound from './pages/Day7/NotFound';
 
 
@@ -70,6 +73,9 @@ function App() {
         <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/" element={<MyLoginApp />} />
         <Route path="/MyLoginApp" element={<MyLoginApp />} />
+        <Route path="/UserRegister" element={<UserRegister />} />
+        <Route path="/UserLogin" element={<UserLogin />} />
+        <Route path="/seller-products" element={<SellerViewProducts />} />
         <Route path="*" element={<NotFound />} />
           </Routes>
     </div>
