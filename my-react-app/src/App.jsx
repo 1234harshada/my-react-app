@@ -1,11 +1,17 @@
-import './App.css';
 import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 /* =========================
-   Pages
+   Blog Components
+========================= */
+import BlogList from './components/BlogList';
+import SingleBlog from './components/SingleBlog';
+import BlogCreateForm from './components/BlogCreateForm';
+
+/* =========================
+   Old / Previous Components
 ========================= */
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -14,10 +20,9 @@ import UsePharma from './pages/Day4/UsePharma';
 import { StyledComponents } from './pages/Day5/StyledComponents';
 import Greetings from './pages/Day5/Greetings';
 import Fruits from './pages/Day5/Fruits';
-import DynamicStyles from './pages/Day6/DynamicStyles';
 import LoginRegister from './pages/Day6/LoginRegister';
 import Products from './pages/Day8/Products';
-import StoreProducts from './pages/Day8/StoreProducts';
+import StoreProducts from './components/StoreProducts';
 import SingleProduct from './pages/Day8/SingleProduct';
 import Cart from './pages/Day8/Cart';
 import PriceCalculator from './pages/Day9/PriceCalculator';
@@ -31,8 +36,6 @@ import Calculator from './pages/Day16/Calculator';
 import AuthApp from './pages/Day17_Test2/AuthApp';
 import RegisterPage from './pages/LoginSystem/RegisterPage';
 import LoginPage from './pages/LoginSystem/LoginPage';
-import MyLoginApp from './pages/MyLoginApp';
-import NotFound from './pages/Day7/NotFound';
 
 /* =========================
    Components
@@ -43,12 +46,17 @@ import SellerProduct from './components/SellerProduct';
 import UserProducts from './components/UserProducts';
 
 /* =========================
-   Assignment / New Components
+   Extra / Assignment Components
 ========================= */
-import StoreProductsComp from './components/StoreProducts';  // Product list
-import SellerOrders from './components/SellerOrders';        // Seller orders
+import StoreProductsComp from './components/StoreProducts';
+import SellerOrders from './components/SellerOrders';
 import AddToCart from './components/AddToCart';
 import CartList from './components/CartList';
+
+/* =========================
+   NotFound Page
+========================= */
+import NotFound from './pages/Day7/NotFound';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -81,21 +89,21 @@ function App() {
       {/* Navbar */}
       <nav style={{ padding: '10px', borderBottom: '1px solid gray', textAlign: 'center' }}>
         <Link style={{ margin: '0 10px'}} to="/">Home</Link>
-        <Link style={{ margin: '0 10px'}} to="/register-user">Register</Link>
-        <Link style={{ margin: '0 10px'}} to="/login-user">Login</Link>
-        <Link style={{ margin: '0 10px'}} to="/seller-product">Seller Product</Link>
+        <Link style={{ margin: '0 10px'}} to="/create">Create Blog</Link>
+        <Link style={{ margin: '0 10px'}} to="/profile">Profile</Link>
         <Link style={{ margin: '0 10px'}} to="/products">Products</Link>
         <Link style={{ margin: '0 10px'}} to="/storeproducts">Store Products</Link>
-        <Link style={{ margin: '0 10px'}} to="/seller-orders">Seller Orders</Link> 
-        <Link style={{ margin: '0 10px'}} to="/user-products">User Products</Link>
-        <Link style={{ margin: '0 10px'}} to="/addtocart">Add To Cart</Link>
-        <Link style={{ margin: '0 10px'}} to="/viewcart">View Cart ({cartItems.length})</Link>
+        <Link style={{ margin: '0 10px'}} to="/cart">View Cart ({cartItems.length})</Link>
       </nav>
 
       {/* Routes */}
       <Routes>
-        {/* Pages */}
-        <Route path="/" element={<Home />} />
+        {/* Blog App */}
+        <Route path="/" element={<BlogList />} />
+        <Route path="/blogs/:id" element={<SingleBlog />} />
+        <Route path="/create" element={<BlogCreateForm />} />
+
+        {/* Old / Previous Pages */}
         <Route path="/profile" element={<Profile />} />
         <Route path="/usestate" element={<UseState />} />
         <Route path="/usepharma/:id" element={<UsePharma />} />
@@ -119,7 +127,6 @@ function App() {
         <Route path="/AuthApp/*" element={<AuthApp />} />
         <Route path="/RegisterPage" element={<RegisterPage />} />
         <Route path="/LoginPage" element={<LoginPage />} />
-        <Route path="/MyLoginApp" element={<MyLoginApp />} />
 
         {/* Components */}
         <Route path="/register-user" element={<RegisterUser />} />
@@ -127,7 +134,7 @@ function App() {
         <Route path="/seller-product" element={<SellerProduct />} />
         <Route path="/user-products" element={<UserProducts />} />
 
-        {/* Assignment / New Components */}
+        {/* Extra / Assignment Components */}
         <Route path="/seller-orders" element={<SellerOrders />} />
         <Route path="/addtocart" element={<AddToCart addToCart={addToCart} />} />
         <Route path="/viewcart" element={<CartList cartItems={cartItems} removeFromCart={removeFromCart} />} />
